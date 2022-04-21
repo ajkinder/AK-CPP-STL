@@ -19,7 +19,9 @@ private:
 
 public:
    AKvector(int initSize = 0); // default constructor
-   AKvector(const AKvector& rhs); // copy constructor~AKvector () { delete[] mT; }
+   AKvector(const AKvector& rhs); // copy constructor
+   
+   ~AKvector () { delete[] mT; } // destructor
 
    const AKvector& operator= (const AKvector& rhs);
    void resize(int newSize);
